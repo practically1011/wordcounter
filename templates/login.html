@@ -1,0 +1,14 @@
+<h4> Enter your login details </h4>
+
+{% for message in messages %}
+<h5 style="color:red;"> {{message}} <h5>
+{% endfor %}
+
+<form method="POST" action="login">
+{% csrf_token %}
+<label> Username:</label>
+<input type="text" name="username" autocomplete="off"><br><br>
+<label>Password:</label>
+<input type="password" name="password"><br><br>
+<button>Login</button>
+</form>
